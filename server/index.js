@@ -97,7 +97,7 @@ app.get('/api/health', async (req, res) => {
 app.use('/api', apiRoutes);
 
 // ─── Production Frontend Serving ─────────────────────────
-if (process.env.NODE_ENV === 'production' || process.env.SERVE_FRONTEND === 'true') {
+if (process.env.SERVE_FRONTEND === 'true') {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const buildPath = path.resolve(__dirname, '../client/dist');
   
